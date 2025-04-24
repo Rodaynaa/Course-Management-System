@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('vercel');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const courseRoutes = require('../routes/courses');
@@ -24,4 +23,3 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch(err => console.error(err));
 
 module.exports = app;
-module.exports.handler = serverless(app);
